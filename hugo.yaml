@@ -1,0 +1,314 @@
+
+baseURL: "https://critter.codes"
+languageCode: "en-us"
+title: "critter::codes() 🐾"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+enableRobotsTXT: true
+
+#services:
+  #googleAnalytics:
+    #id: G-MEASUREMENT_ID
+  #disqus:
+    #shortname: your-disqus-shortname
+
+pagination:
+  pagerSize: 3
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+
+params:
+  title: "critter::codes()"
+  description: Ally is a DevOps engineer and software developer based in Germany.
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/pawprints.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "light" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  # When using hex codes for colors, quotations must be used along with the # sign
+  # color:
+  #   textColor: "#343a40"
+  #   secondaryTextColor: "#6c757d"
+  #   textLinkColor: "#007bff"
+  #   backgroundColor: "#eaedf0"
+  #   secondaryBackgroundColor: "#64ffda1a"
+  #   primaryColor: "#007bff"
+  #   secondaryColor: "#f8f9fa"
+
+  #   darkmode:
+  #     textColor: "#e4e6eb"
+  #     secondaryTextColor: "#b0b3b8"
+  #     textLinkColor: "#ffffff"
+  #     backgroundColor: "#18191a"
+  #     secondaryBackgroundColor: "#212529"
+  #     primaryColor: "#ffffff"
+  #     secondaryColor: "#212529"
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "critter::codes()" # Brand name for the brand | default is the title variable
+    disableSearch: false
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : true
+    enableSeparator: false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: true
+      disableProjects: true
+      disableAchievements: true
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Ally 🐶"
+    subtitle: "I make things work."
+    content: "I am a dedicated DevOps Engineer, Furry, and Activist with a background in software development, aiming to cooperate with dev teams to ensure operational requirements are met and workflows are automated so that everyone can focus on building cool things."
+    
+    #image: /images/paw.png
+    bottomImage:
+      enable: true
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: false
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+  
+ # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.jpg"
+    content: |
+     I bridge the gap between software development and IT operations.
+
+     With my background as Software developer, i understand software lifecycles and operational needs.  
+     I focus on optimizing processes and ensuring smooth operation of IT infrastructure.
+     
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "Kubernetes"
+        - "Docker"
+        - "Terraform"
+        - "Google Cloud"
+        - "AWS"
+        - "Proxmox"
+        - "loki+grafana"
+        - "Nix(OS)"
+        - "Rust"
+        - "Python"
+        - "GitLab CI/CD"
+        - "JenKins"
+
+
+  # Experience
+  experience:
+    enable: true
+    # title: "
+    items:
+      - job: "Referentin IT"
+        company: "ROBIN WOOD"
+        companyUrl: "https://robinwood.de"
+        date: "March 2025 - present"
+        featuredLink:
+          enable: false
+          url: ""
+        info:
+          enable: false
+          content: ""
+        content: |
+           I am currently working for ROBIN WOOD,
+           a German NGO that promotes sustainable forestry, environmental protection and social justice.  
+           Through non-violent activism and campaigns we inspire and empower individuals and communities to fight for a fairer, more sustainable world.
+           
+           My job is to oversee and manage the IT infrastructure as well as providing first to third level support.
+
+      - job: "Activist"
+        company: "Fridays for Future"
+        companyUrl: "/#"
+        date: "2018 - present"
+
+        content: |
+          I am and was managing infrastructure and developing software for Fridays for Future and a lot of other activist collectives.  
+          This includes Server Administration, Web- and App-Development and giving workshops on topics like digital self-determination and basics of IT Security,  
+          as well as providing support to various entities and doing hardware repairs.
+
+          It also includes climbing very high to install solar panels for camps or forest occupations, or setting up radio relay routes to bring internet connectivity to those places.
+          I used to squat forests but nowadays act rather 'in the background' due to health issues. 
+
+      - job: "Volunteer/Activist"
+        company: "Chaos Computer Club"
+        companyUrl: "https://ccc.de"
+        date: "2020 - present"
+        
+        content: |
+          I am currently working as a software developer at [example org.](https://example.com) in San Francisco, CA. I am currently working on a project that will be used to help people find the best way to get around the city.
+
+          - Lead backend developer for a product.
+          - Created a frontend design for a product.
+
+      - job: "Activist/Harmreductionist"
+        company: "TripSit"
+        companyUrl: "https://example.com"
+        date: "2020 - 2023"
+
+        content: |
+          TripSit is an online community advocating for harm reduction and enabling people who use drugs to make informed decisions by providing factual information, as well as lending an open ear to those who need someone to talk to (e.g. during a bad trip) and enabling people to get access to safe consumption utensils.  
+          I did help out with research and support and made significant code contributions to their tooling as well as taking on operational ressponsibilities.
+
+   
+
+
+  # Achievements
+  achievements:
+    enable: false
+    title: "aa"
+    items:
+      - title: blub123
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievement.jpg
+
+  # projects
+  projects:
+    enable: true
+    title: " "
+    items:
+      - title: "Infra @ camps and forest occupations"
+        content: | 
+          I  provide technical infrastructure for activistic communities, camps and squats.
+
+          That requires a lot of creativity, knowledge and swearing.  
+          
+        image: /images/danni-335834413.jpg
+        badges:
+          - "OPNSense"
+          - "radio relay links"
+          - "Freifunk"
+          - "Improvisation"
+          - "ad-hoc infrastructure"
+
+      - title: TripSit.me
+        content: |
+         TripSit is an online community dedicated to promoting harm reduction and safer drug use which i volunteered for in the past.
+        image: /images/tripsit.png
+       
+        badges:
+          - "TypeScript"
+          - "Bootstrap"
+          - "System administration"
+
+      - title: Chaos Computer Club
+        content: |
+          I help make events, like the annual Chaos Communication Congress, happen and be accessible for as many creatures as possible. Furthermore, i am also active in a bunch of hackspaces where i do all kinds of shenanigans.
+        image: /images/fairydust.jpg
+        badges:
+          - "Rust"
+          - "Java"
+          - "System administration"
+          - "NixOS"
+          - "Networking (computers)"
+          - "Networking (people)"
+
+  #Contact
+  contact:
+    enable: true
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+    btnName: Mail me
+    btnLink: mailto:ally@critter.codes
+
+  footer:
+    recentPosts:
+      path: "blogs"
+      count: 3
+      title: Recent Posts
+      enable: true
+      disableFeaturedImage: false
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    socialShare: true
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+    tags:
+      openInNewTab: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Table Of Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>
