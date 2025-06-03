@@ -1,7 +1,7 @@
 ---
 title: "Introduction: Hello world!"
 date: 2025-03-22T15:44:17+01:00
-draft: true
+draft: false
 author: Ally Naumann
 tags:
   - personal
